@@ -81,7 +81,7 @@ sw.js.map
 *.map
 
 # HTML template and manifest (if dynamically generated)
-index.html
+# index.html
 manifest.json
 
 # IDE specific settings for Visual Studio
