@@ -2,6 +2,10 @@ import 'regenerator-runtime';
 import '../styles/style.css';
 import '../styles/responsive.css';
 import swRegister from './utils/sw-register';
+import 'lazysizes';
+import 'lazysizes/plugins/parent-fit/ls.parent-fit';
+import App from './views/app';
+
 // import WebSocketInitiator from './utils/websocket-initiator';
 // import CONFIG from './globals/config';
 
@@ -13,8 +17,6 @@ const loadComponents = async () => {
 
 document.addEventListener('DOMContentLoaded', async () => {
   await loadComponents();
-
-  const { default: App } = await import('./views/app');
 
   const app = new App({
     navlinks: document.querySelectorAll('#navigationDrawer ul li a'),

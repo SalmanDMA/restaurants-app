@@ -81,10 +81,11 @@ body {
 	display: grid;
 	grid-template-columns: auto 1fr auto;
 	gap: 10px;
-	position: sticky;
+	position: fixed;
 	top: 0;
 	z-index: 99;
 	box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+	width: 100%;
 }
 
 .app-bar .app-bar__menu {
@@ -115,7 +116,7 @@ body {
 }
 
 .app-bar .app-bar__navigation {
-	position: absolute;
+	position: fixed;
 	top: 57px;
 	left: -180px;
 	width: 150px;
@@ -164,7 +165,7 @@ main {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	background-image: url('../public/images/heros/hero-image_1.jpg');
+	background-image: url('../public/images/heros/hero-image_1_small.jpg');
 	background-size: cover;
 	background-position: center;
 	color: white;
@@ -234,6 +235,14 @@ main {
 .restaurant {
 	border: 1px solid #ddd;
 	padding: 1rem;
+}
+
+.restaurant h3 {
+	min-height: 44px;
+	min-width: 44px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 .restaurant a {

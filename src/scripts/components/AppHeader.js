@@ -8,7 +8,7 @@ class AppHeader extends HTMLElement {
 				<div class="app-bar__brand">
 					<h1>Restaurant Catalogue</h1>
 				</div>
-				<nav class="app-bar__navigation">
+				<nav class="app-bar__navigation" id="navigationDrawer">
 					<ul>
 						<li><a href="#/home">Home</a></li>
 						<li><a href="#/favorite">Favorite</a></li>

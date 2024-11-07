@@ -1,5 +1,6 @@
 import UrlParser from '../routes/url-parser';
 import routes from '../routes/routes';
+import DrawerInitiator from '../utils/drawer-initiator';
 
 class App {
   constructor({ navlinks, button, drawer, content, backdrop, footerCopyright, footerSubscribeButton, footerUnsubscribeButton, skipToContentLink }) {
@@ -19,7 +20,8 @@ class App {
   }
 
   async _initialAppShell() {
-    const { default: DrawerInitiator } = await import('../utils/drawer-initiator');
+    // const { default: DrawerInitiator } = await import('../utils/drawer-initiator');
+
     DrawerInitiator.init({
       button: this._button,
       drawer: this._drawer,

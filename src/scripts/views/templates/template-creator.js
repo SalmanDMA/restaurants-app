@@ -3,8 +3,10 @@ import CONFIG from '../../globals/config';
 const createRestaurantDetailTemplate = (restaurant) => `
   <h2 class="restaurant__title">${restaurant.name}</h2>
     <picture>
-     <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}">
-     <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" class="lazyload" />
+       <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${restaurant.pictureId}">
+       <source media="(max-width: 1024px)" srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM}${restaurant.pictureId}">
+  
+      <img src="${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}-large.jpg" alt="${restaurant.name}" crossorigin="anonymous" class="lazyload" />
     </picture>
     
     <p><strong>Address:</strong> ${restaurant.address}</p>
@@ -44,8 +46,10 @@ const createRestaurantDetailTemplate = (restaurant) => `
 const createRestaurantItemTemplate = (restaurant) => `
   <div class="restaurant">
      <picture>
-       <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}">
-       <img src="${CONFIG.BASE_IMAGE_URL}${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" class="lazyload" />
+       <source media="(max-width: 600px)" srcset="${CONFIG.BASE_IMAGE_URL_SMALL}${restaurant.pictureId}">
+       <source media="(max-width: 1024px)" srcset="${CONFIG.BASE_IMAGE_URL_MEDIUM}${restaurant.pictureId}">
+       
+       <img src="${CONFIG.BASE_IMAGE_URL_LARGE}${restaurant.pictureId}" alt="${restaurant.name}" crossorigin="anonymous" class="lazyload" />
      </picture>
 
      <div>
